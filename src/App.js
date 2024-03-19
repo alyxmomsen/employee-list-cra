@@ -37,9 +37,7 @@ function App() {
       ))}
       </div>
       <div className={`${commonStyle.modalWindow} ${(fullCardID + 1) && commonStyle.open}`}>
-        <div className={'modal-window'}>
-          {(fullCardID + 1) && <UserCard onClick={() => {setFullCardID(-1)}} data={users[fullCardID]}/>}
-        </div>
+        {(fullCardID + 1) && <UserCard onClick={() => {setFullCardID(-1)}} data={users[fullCardID]}/>}
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const demo = {
 export default function UserCard ({data = demo , onClick = f => f}) {
 
     return (
-        <div>
+        <div className={style.wrapper}>
             <div onClick={() => {onClick()}}>close</div>
             <h3>Имя: <span id="name">{data.name}</span></h3>
             <p>Email: <a href="mailto:in@aol.net" id="email">{data.email}</a></p>
