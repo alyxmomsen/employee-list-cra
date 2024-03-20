@@ -1,28 +1,26 @@
-
-
 .mainContainer {
-    width:800 ;
-    height: auto;
-    display: flex;
-    gap:9px ;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin:9px ;
+  width: 800;
+  height: auto;
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 9px;
 }
 
 .modalWindow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(59, 73, 85, 0.9) ;
-    border: 2px solid black;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(59, 73, 85, 0.9);
+  border: 2px solid black;
+  display: none;
 }
 
 .modalWindow.open {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

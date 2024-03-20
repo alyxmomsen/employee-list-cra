@@ -1,14 +1,17 @@
 /* user card min */
 
 .wrapper {
-    width: fit-content;
-    height: auto;
-    border: 1px solid salmon;
-    padding: 9px;
-    cursor: pointer ;
-    transition: all .2s ease-out;
+  width: 357px;
+  height: 314px;
+  border: 1px solid salmon;
+  padding: 9px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .wrapper:hover {
-    background-color: #d4f1ed;
+  background-color: #d4f1ed;
 }

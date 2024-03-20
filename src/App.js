@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 /* -------------------------- */
 import axios from "axios";
 import UserCardMiniature from "./user-card/miniature/ui";
-import commonStyle from './styles/common.module.css' ;
+import commonStyle from "./styles/common.module.css";
 import UserCard from "./user-card/regular/ui";
 /* -------------------------- */
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
   const [inputed, setInputed] = useState("");
 
-  const [fullCardID , setFullCardID] = useState (-1) ;
+  const [fullCardID, setFullCardID] = useState(-1);
 
   useEffect(() => {
     getData("").then((data) => {
@@ -32,12 +32,32 @@ function App() {
         value={inputed}
       />
       <div className={commonStyle.mainContainer}>
-      {users.map((elem , i) => (
-        <UserCardMiniature data={elem} id={i} key={i} onClick={() => {setFullCardID(i)}} />
-      ))}
+        {users.map((elem, i) => (
+          <UserCardMiniature
+            data={elem}
+            id={i}
+            key={i}
+            onClick={() => {
+              setFullCardID(i);
+            }}
+          />
+        ))}
       </div>
-      <div className={`${commonStyle.modalWindow} ${(fullCardID + 1) && commonStyle.open}`}>
-        {(fullCardID + 1) && <UserCard onClick={() => {setFullCardID(-1)}} data={users[fullCardID]}/>}
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+          setFullCardID(-1);
+        }}
+        className={`${commonStyle.modalWindow} ${fullCardID + 1 && commonStyle.open}`}
+      >
+        {fullCardID + 1 && (
+          <UserCard
+            onClick={() => {
+              setFullCardID(-1);
+            }}
+            data={users[fullCardID]}
+          />
+        )}
       </div>
     </div>
   );
