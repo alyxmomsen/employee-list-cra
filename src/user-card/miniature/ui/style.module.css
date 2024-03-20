@@ -1,17 +1,45 @@
-/* user card min */
+/* user card miniature */
 
 .wrapper {
   width: 357px;
   height: 314px;
-  border: 1px solid salmon;
-  padding: 9px;
+  /* border: 1px solid salmon; */
+  padding: 24px;
   cursor: pointer;
   transition: all 0.2s ease-out;
   display: flex;
   flex-direction: column;
   align-items: start;
+  gap: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px #0001;
+}
+
+.phone_and_email_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  align-items: start;
+  color: #8189a3;
+  text-decoration: none;
+}
+
+.phone_and_email_wrapper a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.phone_and_email_wrapper a:visited {
+  /* color: inherit; */
+}
+
+.wrapper h2 {
+  font-size: 24px;
+  color: #262c40;
 }
 
 .wrapper:hover {
-  background-color: #d4f1ed;
+  /* background-color: #d4f1ed; */
 }

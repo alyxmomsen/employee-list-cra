@@ -22,17 +22,19 @@ export default function UserCardMiniature({ data, id, onClick = (f) => f }) {
       className={style.wrapper}
     >
       <h2>
-        Имя: <span id="name">{data.name}</span>
+        <span id="name">{data.name}</span>
       </h2>
-      <p>
-        Email:{" "}
-        <a href="mailto:in@aol.net" id="email">
-          {data.email}
-        </a>
-      </p>
-      <p>
-        Телефон: <span id="phone">{data.phone}</span>
-      </p>
+      <div className={style.phone_and_email_wrapper}>
+        <div>
+          Email:{" "}
+          <a href="mailto:in@aol.net" id="email">
+            {data.email}
+          </a>
+        </div>
+        <div>
+          Телефон: <span id="phone">{data.phone}</span>
+        </div>
+      </div>
     </div>
   );
 }

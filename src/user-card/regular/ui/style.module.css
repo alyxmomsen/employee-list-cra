@@ -1,8 +1,72 @@
 .wrapper {
-  width: fit-content;
-  height: auto;
+  width: 500px;
+  height: 468px;
   border: 1px solid salmon;
   padding: 9px;
   cursor: pointer;
   background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.wrapper * {
+  border: 1px solid;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.caption h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.employeeInfo {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: start; */
+  justify-content: space-between;
+  text-align: left;
+}
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Два столбца */
+  grid-auto-rows: minmax(min-content, max-content); /* Высота рядов под контент */
+  gap: 10px; /* Расстояние между ячейками */
+  font-size: 18px;
+}
+
+.additionalInfo {
+  display: flex ;
+  font-size: 16px;
+  flex-direction: column ;
+  gap: 12px;
+
+}
+
+.additionalInfo p {
+  margin: 0;
+}
+
+.employeeInfo > .left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: max-content;
+}
+
+.employeeInfo > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: max-content;
 }

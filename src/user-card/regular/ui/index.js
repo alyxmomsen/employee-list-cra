@@ -16,37 +16,41 @@ const demo = {
 export default function UserCard({ data = demo, onClick = (f) => f }) {
   return (
     <div onClick={(e) => e.stopPropagation()} className={style.wrapper}>
-      <div
-        onClick={(e) => {
-          onClick();
-        }}
-      >
-        close
+      <div className={style.caption}>
+        <h2>
+          <span id="name">{data.name}</span>
+        </h2>
+        <div
+          onClick={(e) => {
+            onClick();
+          }}
+        >
+          close
+        </div>
       </div>
-      <h3>
-        Имя: <span id="name">{data.name}</span>
-      </h3>
-      <p>
-        Email:{" "}
-        <a href="mailto:in@aol.net" id="email">
-          {data.email}
-        </a>
-      </p>
-      <p>
-        Телефон: <span id="phone">{data.phone}</span>
-      </p>
-      <p>
-        Адрес: <span id="address">{data.address}</span>
-      </p>
-      <p>
-        Должность: <span id="position_name">{data.position_name}</span>
-      </p>
-      <p>
-        Отдел: <span id="department">{data.department}</span>
-      </p>
-      <p>
-        Дата приема на работу: <span id="hire_date">{data.hire_date}</span>
-      </p>
+      <div className={style.employeeInfo}>
+        <div class={style.gridContainer}>
+          <span>Телефон:</span>
+          <span id="phone">{data.phone}</span>
+          <span>Email:</span>
+          <a href="mailto:in@aol.net" id="email">
+            {data.email}
+          </a>
+          <span>Дата приема на работу:</span>
+          <span id="hire_date">{data.hire_date}</span>
+          <span>Должность:</span>
+          <span id="position_name">{data.position_name}</span>
+          <span>Отдел:</span>
+          <span id="department">{data.department}</span>
+        </div>
+      </div>
+      <div className={style.additionalInfo}>
+        <div>Дополнительная информация:</div>
+        <p>
+          Разработчики используют текст в качестве заполнителя макта страницы.
+          Разработчики используют текст в качестве заполнителя макта страницы.
+        </p>
+      </div>
     </div>
   );
 }
