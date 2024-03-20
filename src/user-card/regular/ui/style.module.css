@@ -1,7 +1,7 @@
 .wrapper {
   width: 500px;
   height: 468px;
-  border: 1px solid salmon;
+  /* border: 1px solid salmon; */
   padding: 9px;
   cursor: pointer;
   background-color: whitesmoke;
@@ -11,11 +11,13 @@
   padding: 24px;
   align-items: start;
   justify-content: flex-start;
+  /* overflow-y:scroll ; */
+  border-radius: 16px;
 }
 
-.wrapper * {
+/* .wrapper * {
   border: 1px solid;
-}
+} */
 
 .caption {
   display: flex;
@@ -30,8 +32,7 @@
 
 .employeeInfo {
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: start; */
+  font-size: 16px;
   justify-content: space-between;
   text-align: left;
 }
@@ -45,12 +46,24 @@
   font-size: 18px;
 }
 
+.gridContainer span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* height: 50px; */
+}
+
 .additionalInfo {
   display: flex ;
   font-size: 16px;
   flex-direction: column ;
   gap: 12px;
+  color: #262C40 ;
+  text-align: left;
+}
 
+.additionalInfo > div {
+  font-size: 18px;
 }
 
 .additionalInfo p {
