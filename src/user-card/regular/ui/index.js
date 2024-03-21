@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import style from "./style.module.css";
 
+import closeCrossImg from "./../../../images/miscellaneous-angle.png" ;
+
 const demo = {
   name: "Ferdinand Carney",
   phone: "(640) 447-3254",
@@ -20,12 +22,12 @@ export default function UserCard({ data = demo, onClick = (f) => f }) {
         <h2>
           <span id="name">{data.name}</span>
         </h2>
-        <div
+        <div className={style.closeButtonContainer}
           onClick={(e) => {
             onClick();
           }}
         >
-          close
+          <img src={closeCrossImg} alt="altuxa" width={20} height={20} />
         </div>
       </div>
       <div className={style.employeeInfo}>

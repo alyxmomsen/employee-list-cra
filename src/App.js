@@ -6,11 +6,10 @@ import axios from "axios";
 import UserCardMiniature from "./user-card/miniature/ui";
 import commonStyle from "./styles/common.module.css";
 import UserCard from "./user-card/regular/ui";
+import InputBox from "./input-box/Input-box";
 /* -------------------------- */
 function App() {
   const [users, setUsers] = useState([]);
-
-  const [inputed, setInputed] = useState("");
 
   const [fullCardID, setFullCardID] = useState(-1);
 
@@ -23,14 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <input
-        onKeyUp={(e) => getData(inputed).then((data) => setUsers(data))}
-        onChange={(e) => {
-          setInputed(e.currentTarget.value);
-        }}
-        type="text"
-        value={inputed}
-      />
+      <InputBox getDataCallBack={getData} setUsersCallBack={setUsers} />
       <div className={commonStyle.mainContainer}>
         {users.map((elem, i) => (
           <UserCardMiniature

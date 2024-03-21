@@ -1,11 +1,11 @@
 .mainContainer {
-  width: 800;
+  width: 1120px;
   height: auto;
   display: flex;
   gap: 9px;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 9px;
+  justify-content: space-between;
+  margin: 32px auto;
 }
 
 .modalWindow {
